@@ -24,6 +24,22 @@
 			]
 		}
 	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"Material.002",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.09999974071979523,
+					0.10000000149011612,
+					0.10000000149011612,
+					1
+				],
+				"metallicFactor":0.10000000149011612,
+				"roughnessFactor":0.5
+			}
+		}
+	],
 	"meshes":[
 		{
 			"name":"link_1",
@@ -33,7 +49,8 @@
 						"POSITION":0,
 						"NORMAL":1
 					},
-					"indices":2
+					"indices":2,
+					"material":0
 				}
 			]
 		}

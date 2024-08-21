@@ -7,9 +7,9 @@ export default function Home() {
   const robotNameList = ["4_DoF"]
   const [robotName,set_robotName] = React.useState(robotNameList[0])
   const [j1_rotate,set_j1_rotate] = React.useState(0)
-  const [j2_rotate,set_j2_rotate] = React.useState(0)
-  const [j3_rotate,set_j3_rotate] = React.useState(0)
-  const [j4_rotate,set_j4_rotate] = React.useState(0)
+  const [j2_rotate,set_j2_rotate] = React.useState(-85)
+  const [j3_rotate,set_j3_rotate] = React.useState(170)
+  const [j4_rotate,set_j4_rotate] = React.useState(5)
   const [j5_rotate,set_j5_rotate] = React.useState(0)
   const [c_pos_x,set_c_pos_x] = React.useState(0)
   const [c_pos_y,set_c_pos_y] = React.useState(0.2)
@@ -91,14 +91,13 @@ const Assets = ()=>{
   return (
     <a-assets>
       {/*4_DoF*/}
-      <a-asset-items id="base" src="lss_base.gltf" ></a-asset-items>
-      <a-asset-items id="j1" src="link_0.gltf" ></a-asset-items>
-      <a-asset-items id="j2" src="link_1.gltf" ></a-asset-items>
-      <a-asset-items id="j3" src="link_2.gltf" ></a-asset-items>
-      <a-asset-items id="j4" src="link_3.gltf" ></a-asset-items>
-      <a-asset-items id="j5" src="link_4.gltf" ></a-asset-items>
-      <a-asset-items id="j6_l" src="finger_l.gltf" ></a-asset-items>
-      <a-asset-items id="j6_r" src="finger_r.gltf" ></a-asset-items>
+      <a-asset-items id="j0" src="link_0.gltf" ></a-asset-items>
+      <a-asset-items id="j1" src="link_1.gltf" ></a-asset-items>
+      <a-asset-items id="j2" src="link_2.gltf" ></a-asset-items>
+      <a-asset-items id="j3" src="link_3.gltf" ></a-asset-items>
+      <a-asset-items id="j4" src="link_4.gltf" ></a-asset-items>
+      <a-asset-items id="j5_l" src="finger_l.gltf" ></a-asset-items>
+      <a-asset-items id="j5_r" src="finger_r.gltf" ></a-asset-items>
     </a-assets>
   )
 }
@@ -106,15 +105,13 @@ const Assets = ()=>{
 const Four4_DoF = (props)=>{
   const {visible, j1_rotate, j2_rotate, j3_rotate, j4_rotate, j5_rotate} = props
   return (<>{visible?
-    <a-entity robot-click gltf-model="#base" position="0 0 0" rotation="0 0 0" visible={visible}>
-      <a-entity gltf-model="#j1" position="0 0 0" rotation={`0 0 0`}>
-        <a-entity gltf-model="#j2" position="0 0.151 0" rotation={`0 ${j1_rotate} 0`}>
-          <a-entity gltf-model="#j3" position="0 0.0538 0" rotation={`0 0 ${-j2_rotate}`}>
-            <a-entity gltf-model="#j4" position="-0.13783 0.0253 0" rotation={`0 0 ${j3_rotate}`}>
-              <a-entity gltf-model="#j5" position="0.1632 0 0" rotation={`0 0 ${j4_rotate}`}>
-                <a-entity gltf-model="#j6_l" position="0.05075 0 -0.013" rotation={`0 ${j5_rotate} 0`}></a-entity>
-                <a-entity gltf-model="#j6_r" position="0.05075 0 0.013" rotation={`0 ${-j5_rotate} 0`}></a-entity>
-              </a-entity>
+    <a-entity gltf-model="#j0" position="0 0 0" rotation={`0 0 0`}>
+      <a-entity gltf-model="#j1" position="0 0.046 0" rotation={`0 ${j1_rotate} 0`}>
+        <a-entity gltf-model="#j2" position="0 0.0538 0" rotation={`0 0 ${-j2_rotate}`}>
+          <a-entity gltf-model="#j3" position="0.02533 0.13785 0" rotation={`0 0 ${-j3_rotate}`}>
+            <a-entity gltf-model="#j4" position="0 0.16325 -0.0002" rotation={`0 0 ${-j4_rotate}`}>
+              <a-entity gltf-model="#j5_l" position="0 0.05075 -0.0128" rotation={`${-j5_rotate} 0 0`}></a-entity>
+              <a-entity gltf-model="#j5_r" position="0 0.05075 0.0128" rotation={`${j5_rotate} 0 0`}></a-entity>
             </a-entity>
           </a-entity>
         </a-entity>

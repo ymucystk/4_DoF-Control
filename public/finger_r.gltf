@@ -17,11 +17,27 @@
 			"mesh":0,
 			"name":"finger_r",
 			"rotation":[
-				0.7071068286895752,
-				0,
-				0,
-				0.7071068286895752
+				0.5000000596046448,
+				0.5,
+				0.5,
+				0.5
 			]
+		}
+	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"Material.001",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.10000000149011612,
+					0.10000000149011612,
+					0.10000000149011612,
+					1
+				],
+				"metallicFactor":0.10000000149011612,
+				"roughnessFactor":0.5
+			}
 		}
 	],
 	"meshes":[
@@ -33,7 +49,8 @@
 						"POSITION":0,
 						"NORMAL":1
 					},
-					"indices":2
+					"indices":2,
+					"material":0
 				}
 			]
 		}
@@ -42,7 +59,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":4984,
+			"count":5002,
 			"max":[
 				0.06000000610947609,
 				0.01348972786217928,
@@ -58,7 +75,7 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":4984,
+			"count":5002,
 			"type":"VEC3"
 		},
 		{
@@ -71,26 +88,26 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":59808,
+			"byteLength":60024,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":59808,
-			"byteOffset":59808,
+			"byteLength":60024,
+			"byteOffset":60024,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":59754,
-			"byteOffset":119616,
+			"byteOffset":120048,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":179372,
+			"byteLength":179804,
 			"uri":"finger_r.bin"
 		}
 	]
