@@ -17,10 +17,10 @@
 			"mesh":0,
 			"name":"finger_l",
 			"rotation":[
-				0.5000001192092896,
-				0.5,
-				0.5,
-				0.5
+				0,
+				0,
+				0.7071068286895752,
+				0.7071068286895752
 			]
 		}
 	],
@@ -59,7 +59,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":4916,
+			"count":4923,
 			"max":[
 				0.06000000610947609,
 				0.013457059860229492,
@@ -75,7 +75,7 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":4916,
+			"count":4923,
 			"type":"VEC3"
 		},
 		{
@@ -88,26 +88,26 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":58992,
+			"byteLength":59076,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":58992,
-			"byteOffset":58992,
+			"byteLength":59076,
+			"byteOffset":59076,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":58554,
-			"byteOffset":117984,
+			"byteOffset":118152,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":176540,
+			"byteLength":176708,
 			"uri":"finger_l.bin"
 		}
 	]

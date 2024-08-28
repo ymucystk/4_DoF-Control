@@ -7,13 +7,13 @@ export default function Home() {
   const robotNameList = ["4_DoF"]
   const [robotName,set_robotName] = React.useState(robotNameList[0])
   const [j1_rotate,set_j1_rotate] = React.useState(0)
-  const [j2_rotate,set_j2_rotate] = React.useState(-85)
-  const [j3_rotate,set_j3_rotate] = React.useState(170)
-  const [j4_rotate,set_j4_rotate] = React.useState(5)
+  const [j2_rotate,set_j2_rotate] = React.useState(0)
+  const [j3_rotate,set_j3_rotate] = React.useState(0)
+  const [j4_rotate,set_j4_rotate] = React.useState(0)
   const [j5_rotate,set_j5_rotate] = React.useState(0)
   const [c_pos_x,set_c_pos_x] = React.useState(0)
-  const [c_pos_y,set_c_pos_y] = React.useState(0.2)
-  const [c_pos_z,set_c_pos_z] = React.useState(0.5)
+  const [c_pos_y,set_c_pos_y] = React.useState(0.25)
+  const [c_pos_z,set_c_pos_z] = React.useState(0.4)
   const [c_deg_x,set_c_deg_x] = React.useState(0)
   const [c_deg_y,set_c_deg_y] = React.useState(0)
   const [c_deg_z,set_c_deg_z] = React.useState(0)
@@ -107,11 +107,11 @@ const Four4_DoF = (props)=>{
   return (<>{visible?
     <a-entity gltf-model="#j0" position="0 0 0" rotation={`0 0 0`}>
       <a-entity gltf-model="#j1" position="0 0.046 0" rotation={`0 ${j1_rotate} 0`}>
-        <a-entity gltf-model="#j2" position="0 0.0538 0" rotation={`0 0 ${-j2_rotate}`}>
-          <a-entity gltf-model="#j3" position="0.02533 0.13785 0" rotation={`0 0 ${-j3_rotate}`}>
-            <a-entity gltf-model="#j4" position="0 0.16325 -0.0002" rotation={`0 0 ${-j4_rotate}`}>
-              <a-entity gltf-model="#j5_l" position="0 0.05075 -0.0128" rotation={`${-j5_rotate} 0 0`}></a-entity>
-              <a-entity gltf-model="#j5_r" position="0 0.05075 0.0128" rotation={`${j5_rotate} 0 0`}></a-entity>
+        <a-entity gltf-model="#j2" position="0 0.0538 0" rotation={`${j2_rotate} 0 0`}>
+          <a-entity gltf-model="#j3" position="0 0.13785 0.02533" rotation={`${j3_rotate} 0 0`}>
+            <a-entity gltf-model="#j4" position="0 0.16325 -0.0002" rotation={`${j4_rotate} 0 0`}>
+              <a-entity gltf-model="#j5_l" position="0.0128 0.05075 0" rotation={`0 0 ${-j5_rotate}`}></a-entity>
+              <a-entity gltf-model="#j5_r" position="-0.0128 0.05075 0" rotation={`0 0 ${j5_rotate}`}></a-entity>
             </a-entity>
           </a-entity>
         </a-entity>
